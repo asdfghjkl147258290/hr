@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>候选人端</title>
+  <style>body{font-family:sans-serif;margin:20px} img{max-width:200px;max-height:140px;margin:8px;border:1px solid #ccc}</style>
+</head>
+<body>
+  <h2>候选人端（实时照片展示）</h2>
+  <div id="photos"></div>
+
+<script>
+const photosDiv = document.getElementById('photos');
+
+function render(photos) {
+  photosDiv.innerHTML = '';
+  if (!photos || photos.length===0) {
+    photosDiv.textContent = '暂无照片';
+    return;
+  }
+  photos.forEach(p=>{
+    const img = document.createElement('img');
+    img.src = p.url;
+    photosDiv.appendChild(img);
+  });
+}
+
+async function init() {
+  const r = await fetch('/api/photos');
+  const j = await r.json();
+  render(j.photos);
+}
+
+init();
+
+const socket = io();
+socket.on('photos-updated', data => {
+  render(data.photos);
+});
+</script>
+<script src="/socket.io/socket.io.js"></script>
+</body>
+</html>

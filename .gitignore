@@ -1,6 +1,4 @@
-node_modules
-.env
+node_modules/
 data/*.json
-.DS_Store
-npm-debug.log
-logs
+public/uploads/
+.env
