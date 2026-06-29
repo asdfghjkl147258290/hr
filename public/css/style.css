@@ -1,0 +1,16 @@
+/* Simple styles for HR app */
+body { font-family: Arial, Helvetica, sans-serif; margin:0; color:#222 }
+.container { max-width:900px; margin:0 auto; padding:16px }
+header { background:#0b5; padding:12px 0 }
+header h1 { margin:0; display:inline }
+header nav { float:right }
+header nav a { margin-left:12px; color:#060 }
+.jobs { list-style:none; padding:0 }
+.jobs li { border-bottom:1px solid #ddd; padding:12px 0 }
+.meta { color:#666; font-size:0.9em }
+.jobs-table { width:100%; border-collapse:collapse }
+.jobs-table th, .jobs-table td { border:1px solid #ddd; padding:8px }
+.error { color: #b00 }
+label { display:block; margin:8px 0 }
+input[type=text], textarea, input[type=password] { width:100%; padding:8px; box-sizing:border-box }
+button { padding:8px 12px; }

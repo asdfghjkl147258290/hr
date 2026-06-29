@@ -1,0 +1,16 @@
+<%- include('../layout', { title: '职位列表', body: (function(){ %>
+  <h2>职位列表</h2>
+  <% if (!jobs || !jobs.length) { %>
+    <p>当前没有职位。</p>
+  <% } else { %>
+    <ul class="jobs">
+    <% jobs.forEach(function(job){ %>
+      <li>
+        <h3><%= job.title %></h3>
+        <p class="meta"><%= job.location %> · 发布于 <%= new Date(job.posted_at).toLocaleString() %></p>
+        <p><%= job.description %></p>
+      </li>
+    <% }) %>
+    </ul>
+  <% } %>
+<% })() }) %>

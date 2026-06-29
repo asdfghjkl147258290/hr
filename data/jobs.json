@@ -1,0 +1,18 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "title": "示例：前端工程师",
+      "location": "远程",
+      "description": "负责网站前端开发，要求熟悉 React 或 Vue。",
+      "posted_at": "2026-06-29T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "示例：后端工程师",
+      "location": "北京",
+      "description": "负责 API 设计与实现，熟悉 Node.js。",
+      "posted_at": "2026-06-29T00:00:00.000Z"
+    }
+  ]
+}

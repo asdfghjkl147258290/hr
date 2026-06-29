@@ -1,0 +1,10 @@
+<%- include('../layout', { title: job ? '编辑职位' : '新建职位', body: (function(){ %>
+  <h2><%= job ? '编辑职位' : '新建职位' %></h2>
+  <form method="post" action="<%= job ? ('/admin/jobs/' + job.id + '?_method=PUT') : '/admin/jobs' %>">
+    <label>标题：<input type="text" name="title" value="<%= job ? job.title : '' %>" required></label>
+    <label>地点：<input type="text" name="location" value="<%= job ? job.location : '' %>"></label>
+    <label>描述：<textarea name="description" rows="6"><%= job ? job.description : '' %></textarea></label>
+    <button type="submit">保存</button>
+    <a href="/admin">取消</a>
+  </form>
+<% })() }) %>

@@ -1,0 +1,8 @@
+<%- include('../layout', { title: '管理员登录', body: (function(){ %>
+  <h2>管理员登录</h2>
+  <% if (error) { %><p class="error"><%= error %></p><% } %>
+  <form method="post" action="/admin/login">
+    <label>密码：<input type="password" name="password" required></label>
+    <button type="submit">登录</button>
+  </form>
+<% })() }) %>

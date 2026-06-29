@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title><%= title || 'HR 小程序' %></title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="/">HR 小程序</a></h1>
+      <nav>
+        <a href="/jobs">职位</a>
+        <a href="/admin">管理后台</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <%- body %>
+  </main>
+  <footer class="container">
+    <small>部署说明见 README</small>
+  </footer>
+</body>
+</html>
